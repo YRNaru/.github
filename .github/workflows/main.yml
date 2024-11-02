@@ -2,7 +2,7 @@ name: Run Firebase and Google Sheets Script
 
 on:
   schedule:
-    - cron: '35 1 * * *'  # 毎日午前0時に実行
+    - cron: '0 2 * * *'  # 毎日午前0時に実行
   workflow_dispatch:  # 手動実行を追加
   
 jobs:
