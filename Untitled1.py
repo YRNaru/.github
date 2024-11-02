@@ -7,7 +7,7 @@ from googleapiclient.errors import HttpError
 
 # Firebase アプリ初期化
 if not firebase_admin._apps:
-    cred = credentials.Certificate('/content/test-51ebc-firebase-adminsdk-t5g9u-341f9f2501.json')
+    cred = credentials.Certificate('/content/firebase-service-account.json')
     firebase_admin.initialize_app(cred, {
         'databaseURL': 'https://test-51ebc-default-rtdb.firebaseio.com/'
     })
