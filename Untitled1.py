@@ -7,7 +7,7 @@ from googleapiclient.errors import HttpError
 
 # Firebase アプリ初期化
 if not firebase_admin._apps:
-    cred = credentials.Certificate('/content/firebase-service-account.json')
+    cred = credentials.Certificate('firebase-service-account.json')
     firebase_admin.initialize_app(cred, {
         'databaseURL': 'https://test-51ebc-default-rtdb.firebaseio.com/'
     })
@@ -18,7 +18,7 @@ print(data)
 
 # Google Sheets APIのサービス初期化
 SCOPES = ['https://www.googleapis.com/auth/spreadsheets', 'https://www.googleapis.com/auth/drive']
-SERVICE_ACCOUNT_FILE = '/content/service-account.json'
+SERVICE_ACCOUNT_FILE = 'service-account.json'
 
 # サービスアカウントから資格情報取得
 creds = service_account.Credentials.from_service_account_file(
