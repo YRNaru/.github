@@ -18,7 +18,7 @@ print(data)
 
 # Google Sheets APIのサービス初期化
 SCOPES = ['https://www.googleapis.com/auth/spreadsheets', 'https://www.googleapis.com/auth/drive']
-SERVICE_ACCOUNT_FILE = '/content/test-51ebc-0513ababca21.json'
+SERVICE_ACCOUNT_FILE = '/content/service-account.json'
 
 # サービスアカウントから資格情報取得
 creds = service_account.Credentials.from_service_account_file(
