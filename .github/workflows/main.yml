@@ -2,7 +2,7 @@ name: Run Firebase and Google Sheets Script
 
 on:
   schedule:
-    - cron: '0 2 * * *'  # 毎日午前0時に実行
+    - cron: '0 0 * * *'  # 毎日午前0時に実行
   workflow_dispatch:  # 手動実行を追加
 
 jobs:
@@ -29,4 +29,4 @@ jobs:
       run: |
         echo "${{ secrets.GCP_API_KEY }}" > ${{ github.workspace }}/service-account.json
         echo "${{ secrets.FIREBASE_SERVICE_ACCOUNT }}" > ${{ github.workspace }}/firebase-service-account.json
-        python Untitled1t.py  # スクリプトのファイル名を指定
+        python Untitled1.py  # ここを実際のスクリプト名に変更
